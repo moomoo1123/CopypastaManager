@@ -39,7 +39,7 @@
             uxMRCLabel = new Label();
             uxRecentCopyText = new TextBox();
             uxCopyButton = new Button();
-            textBox1 = new TextBox();
+            uxCopypastaName = new TextBox();
             uxListModeGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             // uxCopyPastaListView
             // 
             uxCopyPastaListView.Location = new Point(12, 85);
+            uxCopyPastaListView.MultiSelect = false;
             uxCopyPastaListView.Name = "uxCopyPastaListView";
             uxCopyPastaListView.Size = new Size(194, 333);
             uxCopyPastaListView.TabIndex = 1;
@@ -170,18 +171,18 @@
             uxCopyButton.Text = "Copy";
             uxCopyButton.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // uxCopypastaName
             // 
-            textBox1.BackColor = SystemColors.ControlLight;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(228, 37);
-            textBox1.MaxLength = 26;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(460, 25);
-            textBox1.TabIndex = 13;
-            textBox1.Text = "WWWWWWWWWWWWWWWWWWWWWWWWWW";
+            uxCopypastaName.BackColor = SystemColors.ControlLight;
+            uxCopypastaName.BorderStyle = BorderStyle.None;
+            uxCopypastaName.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            uxCopypastaName.Location = new Point(228, 49);
+            uxCopypastaName.MaxLength = 26;
+            uxCopypastaName.Name = "uxCopypastaName";
+            uxCopypastaName.ReadOnly = true;
+            uxCopypastaName.Size = new Size(460, 25);
+            uxCopypastaName.TabIndex = 13;
+            uxCopypastaName.Text = "No Copypasta Selected";
             // 
             // CopypastaManager
             // 
@@ -189,7 +190,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(702, 492);
-            Controls.Add(textBox1);
+            Controls.Add(uxCopypastaName);
             Controls.Add(uxCopyButton);
             Controls.Add(uxRecentCopyText);
             Controls.Add(uxMRCLabel);
@@ -222,6 +223,6 @@
         private Label uxMRCLabel;
         private TextBox uxRecentCopyText;
         private Button uxCopyButton;
-        private TextBox textBox1;
+        private TextBox uxCopypastaName;
     }
 }
